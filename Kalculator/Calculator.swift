@@ -9,6 +9,7 @@
 import Foundation
 
 
+
 enum CalculatorOperation: String {
     case add = "+"
     case subtract = "-"
@@ -23,10 +24,10 @@ enum CalculatorError:Error{
 }
 
 class Calculator {
-    private var currentNumber: String = ""
-    private var result: Int = 0
-    private var currentOperation: CalculatorOperation?
-    private var lastOperatorInput:String = ""
+    public var currentNumber: String = ""
+    public var result: Int = 0
+    public var currentOperation: CalculatorOperation?
+    public var lastOperatorInput:String = ""
     
     func inputDigit(_ digit: String) throws -> String {
         if let operation = CalculatorOperation(rawValue: digit) {
@@ -65,12 +66,12 @@ class Calculator {
     }
 
     func divideOperation() throws {
-        if currentNumber == "" || Int(currentNumber) == 0 {
+        guard let currentNumberInt = Int(currentNumber), currentNumberInt != 0 else {
             clear()
             throw CalculatorError.illegalOperation
         }
-        
-        result /= (Int(currentNumber) ?? 0)
+
+        result /= currentNumberInt
     }
 
     func equalsOperation() {
@@ -86,16 +87,17 @@ class Calculator {
         case .multiply:
             multiplyOperation()
         case .divide:
-            try divideOperation()
-        case .equals:
-            equalsOperation()
-        case .none:
-            result = (Int(currentNumber) ?? 0)
+                try divideOperation()
+            case .equals:
+                // If the equals operation was performed, reset the result to the current number.
+                result = Int(currentNumber) ?? 0
+            case .none:
+                result = Int(currentNumber) ?? 0
+            }
+
+            currentOperation = operation
+            currentNumber = "0"
         }
-        
-        currentOperation = operation
-        currentNumber = "0"
-    }
 
     
     func clear() {

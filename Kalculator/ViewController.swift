@@ -11,7 +11,7 @@ import Foundation
 
 class ViewController: UIViewController {
     
-    private var calculator:Calculator?
+    public var calculator:Calculator?
     @IBOutlet weak var resultScreen: UILabel!
     
     @IBAction func inputDigit(_ sender: Any) {
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         display(result: "0")
     }
     
-    private func display(result:String){
+    public func display(result:String){
         resultScreen.text = result
     }
     
@@ -40,6 +40,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         calculator = Calculator()
+        
+        // Set accessibility identifier for resultScreen
+        resultScreen.accessibilityIdentifier = "resultScreen"
     }
     
 }

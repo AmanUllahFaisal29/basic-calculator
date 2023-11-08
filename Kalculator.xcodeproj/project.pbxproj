@@ -12,6 +12,7 @@
 		40BB02471ECDFBEF00A6F9CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40BB02451ECDFBEF00A6F9CF /* Main.storyboard */; };
 		40BB02491ECDFBEF00A6F9CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40BB02481ECDFBEF00A6F9CF /* Assets.xcassets */; };
 		40BB024C1ECDFBEF00A6F9CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40BB024A1ECDFBEF00A6F9CF /* LaunchScreen.storyboard */; };
+		832144C22AFA1A1B003DBB40 /* VCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832144C12AFA1A1B003DBB40 /* VCTests.swift */; };
 		833B35D62AF0169B0090D04C /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833B35D52AF0169B0090D04C /* Calculator.swift */; };
 		833B35DE2AF03D050090D04C /* KalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833B35DD2AF03D050090D04C /* KalculatorUITests.swift */; };
 		833B35FA2AF03EFD0090D04C /* KalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833B35F92AF03EFD0090D04C /* KalculatorTests.swift */; };
@@ -42,6 +43,7 @@
 		40BB02481ECDFBEF00A6F9CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40BB024B1ECDFBEF00A6F9CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40BB024D1ECDFBEF00A6F9CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		832144C12AFA1A1B003DBB40 /* VCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCTests.swift; sourceTree = "<group>"; };
 		833B35D52AF0169B0090D04C /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		833B35DB2AF03D050090D04C /* KalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		833B35DD2AF03D050090D04C /* KalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KalculatorUITests.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				833B35F92AF03EFD0090D04C /* KalculatorTests.swift */,
+				832144C12AFA1A1B003DBB40 /* VCTests.swift */,
 			);
 			path = KalculatorTests;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				833B35FA2AF03EFD0090D04C /* KalculatorTests.swift in Sources */,
+				832144C22AFA1A1B003DBB40 /* VCTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +372,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -421,7 +425,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -435,6 +439,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HCC7B3TKG6;
 				INFOPLIST_FILE = Kalculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iba;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -448,6 +453,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HCC7B3TKG6;
 				INFOPLIST_FILE = Kalculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iba;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -469,7 +475,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -498,7 +504,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
@@ -526,7 +532,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -537,7 +543,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kalculator.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Kalculator";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kalculator.app/Kalculator";
 			};
 			name = Debug;
 		};
@@ -556,7 +562,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
@@ -565,7 +571,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kalculator.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Kalculator";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kalculator.app/Kalculator";
 			};
 			name = Release;
 		};
