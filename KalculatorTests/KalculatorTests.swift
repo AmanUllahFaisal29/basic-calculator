@@ -13,7 +13,7 @@ import XCTest
 
 final class KalculatorTests: XCTestCase {
 var calculator: Calculator!
-//var viewController: ViewController!
+
 
 override func setUp() {
     super.setUp()

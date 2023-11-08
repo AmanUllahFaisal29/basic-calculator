@@ -11,6 +11,7 @@
 import XCTest
 @testable import Kalculator
 
+//VC = ViewController
 final class VCTests: XCTestCase {
     var viewController: ViewController!
 
@@ -28,7 +29,7 @@ final class VCTests: XCTestCase {
 
 
 
-    // This is Positive Unit Test for inputDigit in ViewController class
+    // This is Positive Unit Test for inputDigit
     func testInputDigitPositive() {
 
         viewController.resultScreen.text = ""
@@ -41,7 +42,7 @@ final class VCTests: XCTestCase {
     }
 
 
-    // This is Negative Unit Test for inputDigit in ViewController class
+    // This is Negative Unit Test for inputDigit
     func testInputDigitNegative() {
         viewController.resultScreen.text = ""
 
@@ -51,21 +52,28 @@ final class VCTests: XCTestCase {
         XCTAssertEqual(viewController.resultScreen.text, "", "inputDigit should not display an invalid character on the resultScreen.")
     }
     
-    // This is Positive Unit Test for clear in ViewController class
+    // This is Positive Unit Test for clear
     func testClearPositive() {
+    viewController.resultScreen.text = "123"
+    viewController.clear(UIButton())
+    XCTAssertNotEqual(viewController.resultScreen.text, "0", "Clear didn't reset the resultScreen label to '0' as expected.")
+    }
+
+    // This is Negative Unit Test for clear
+    func testClearNegative() {
         viewController.resultScreen.text = "123"
         viewController.clear(UIButton())
         XCTAssertEqual(viewController.resultScreen.text, "0", "Clear should reset the resultScreen label to '0'.")
     }
 
-    // This is Positive Unit Test for display(result:) in ViewController class
+    // This is Positive Unit Test for display(result:)
     func testDisplayResultPositive() {
         viewController.resultScreen.text = ""
         viewController.display(result: "42")
         XCTAssertEqual(viewController.resultScreen.text, "42", "display(result:) should correctly display the provided result.")
     }
 
-    // This is Negative Unit Test for display(result:) in ViewController class
+    // This is Negative Unit Test for display(result:)
     func testDisplayResultNegative() {
         viewController.resultScreen.text = ""
         viewController.display(result: "ABC")
