@@ -4,7 +4,9 @@
 //
 //  Created by JOGENDRA on 18/05/17.
 //  Copyright © 2017 Jogendra Singh. All rights reserved.
-//
+//  Application Development in iOS Devices
+//  Assignment 3
+//  AmanUllah Faisal 22944
 
 import UIKit
 import Foundation
